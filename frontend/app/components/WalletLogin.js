@@ -34,7 +34,6 @@ const WalletLogin = () => {
     <div>
       {account ? (
         <div>
-          <p>Connected as: {account}</p>
           <button onClick={handleDisconnect} disabled={loading}>
             Disconnect Wallet
           </button>
@@ -44,7 +43,7 @@ const WalletLogin = () => {
           {loading ? 'Connecting...' : 'Connect Wallet'}
         </button>
       )}
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      {error && <p style={{ color: 'red' }}>Retry Connection</p>}
     </div>
   );
 };

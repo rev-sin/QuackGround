@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import WalletLogin from "./WalletLogin";
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -48,7 +49,7 @@ export default function Nav() {
             </Link>
           ))}
           <button className="px-4 py-2 bg-yellow-400 text-black rounded-lg font-semibold hover:bg-yellow-300 hover:shadow-lg hover:shadow-yellow-500/30 transition">
-            Connect Wallet
+                <WalletLogin />
           </button>
         </div>
 
