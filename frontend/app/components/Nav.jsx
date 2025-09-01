@@ -12,8 +12,8 @@ export default function Nav() {
   const links = [
     { href: "/", label: "Home" },
     { href: "/create", label: "Create NFT" },
-    { href: "/marketplace", label: "Marketplace" },
-    { href: "/my-nfts", label: "My NFTs" },
+    { href: "/buy", label: "Marketplace" },
+    { href: "/sell", label: "Sell" },
   ];
 
   return (
