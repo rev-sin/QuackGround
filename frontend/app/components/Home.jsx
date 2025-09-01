@@ -1,7 +1,7 @@
 import React from "react";
 import Create from "./Create";
-import TopCreator from "./TopCreator";
 import Footer from "./Footer";
+import TopCreator from "./TopCreator";
 
 const Home = () => {
   const collections = [
@@ -56,7 +56,7 @@ const Home = () => {
       {/* Trending Collections Section */}
       <section className="px-4 md:px-8 py-16">
         <h3 className="text-3xl md:text-4xl font-bold text-yellow-400 mb-8 text-center">
-           Our Top Collection in Last 7 Days
+          Our Top Collection in Last 7 Days
         </h3>
 
         <div className="overflow-x-auto rounded-xl  shadow-lg">
@@ -75,10 +75,7 @@ const Home = () => {
             </thead>
             <tbody className="divide-y divide-gray-800">
               {collections.map((col, i) => (
-                <tr
-                  key={col.id}
-                  className="hover:bg-gray-900 transition"
-                >
+                <tr key={col.id} className="hover:bg-gray-900 transition">
                   <td className="p-3 text-gray-400">{i + 1}</td>
                   <td className="p-3 flex items-center space-x-3">
                     <img
@@ -115,12 +112,10 @@ const Home = () => {
             </tbody>
           </table>
         </div>
-
-       
       </section>
-      <TopCreator/>
-      <Create/>
-      <Footer/>
+      <TopCreator />
+      <Create />
+      <Footer />
     </div>
   );
 };

@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 export default function Create() {
   return (
     <section className="w-full  flex flex-col items-center justify-center text-center bg-black px-6 md:px-16 lg:px-32 py-20">
-      
       {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
@@ -23,7 +22,8 @@ export default function Create() {
         transition={{ duration: 1 }}
         className="text-gray-300 text-lg md:text-xl max-w-2xl mb-10"
       >
-        Turn your imagination into reality. Generate AI-powered art and mint it into your unique NFT in seconds. Simple, fast, and fully on-chain.
+        Turn your imagination into reality. Generate AI-powered art and mint it
+        into your unique NFT in seconds. Simple, fast, and fully on-chain.
       </motion.p>
 
       {/* CTA Button */}
