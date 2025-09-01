@@ -9,9 +9,27 @@ export default function Page() {
   const [successMessage, setSuccessMessage] = useState("");
 
   const nfts = [
-    { id: 1, name: "Golden Duck", collection: "Crypto Birds", rarity: "Rare", image: "/nft1.png" },
-    { id: 2, name: "Crypto Pond", collection: "Water World", rarity: "Epic", image: "/nft2.png" },
-    { id: 3, name: "Rare Feather", collection: "Crypto Birds", rarity: "Legendary", image: "/nft3.png" },
+    {
+      id: 1,
+      name: "Golden Duck",
+      collection: "Crypto Birds",
+      rarity: "Rare",
+      image: "/nft1.png",
+    },
+    {
+      id: 2,
+      name: "Crypto Pond",
+      collection: "Water World",
+      rarity: "Epic",
+      image: "/nft2.png",
+    },
+    {
+      id: 3,
+      name: "Rare Feather",
+      collection: "Crypto Birds",
+      rarity: "Legendary",
+      image: "/nft3.png",
+    },
   ];
 
   const handleSelect = (nft) => {
@@ -39,7 +57,9 @@ export default function Page() {
     setSelectedNFT(null);
     setPrice("");
     setQuantity(1);
-    setSuccessMessage("Your NFT has been listed! Check it on the QuackGround Marketplace.");
+    setSuccessMessage(
+      "Your NFT has been listed! Check it on the QuackGround Marketplace.",
+    );
   };
 
   return (
@@ -62,7 +82,9 @@ export default function Page() {
                 className="rounded-xl w-full h-56 object-cover mb-3"
               />
               <h2 className="text-lg font-semibold">{nft.name}</h2>
-              <p className="text-sm text-gray-400">{nft.collection} • {nft.rarity}</p>
+              <p className="text-sm text-gray-400">
+                {nft.collection} • {nft.rarity}
+              </p>
             </div>
           ))}
         </div>
@@ -81,10 +103,14 @@ export default function Page() {
             className="rounded-2xl w-full h-64 object-cover mb-4"
           />
           <h2 className="text-2xl font-bold mb-2">{selectedNFT.name}</h2>
-          <p className="text-gray-400 mb-4">{selectedNFT.collection} • {selectedNFT.rarity}</p>
+          <p className="text-gray-400 mb-4">
+            {selectedNFT.collection} • {selectedNFT.rarity}
+          </p>
 
           <form onSubmit={handleSubmit} className="w-full flex flex-col">
-            <label className="block text-sm mb-2">Price (DuckChain tokens)</label>
+            <label className="block text-sm mb-2">
+              Price (DuckChain tokens)
+            </label>
             <input
               type="number"
               step="0.01"
@@ -117,9 +143,14 @@ export default function Page() {
       {showConfirm && (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
           <div className="bg-gray-900 p-6 rounded-3xl max-w-sm w-full text-center shadow-2xl">
-            <h3 className="text-xl font-bold mb-4 text-yellow-400">Confirm Listing</h3>
+            <h3 className="text-xl font-bold mb-4 text-yellow-400">
+              Confirm Listing
+            </h3>
             <p className="text-gray-300 mb-6">
-              You're listing <span className="font-semibold">{selectedNFT.name}</span> for <span className="font-semibold">{price} DuckChain tokens</span> (Quantity: {quantity})
+              You're listing{" "}
+              <span className="font-semibold">{selectedNFT.name}</span> for{" "}
+              <span className="font-semibold">{price} DuckChain tokens</span>{" "}
+              (Quantity: {quantity})
             </p>
             <div className="flex justify-between gap-4">
               <button
