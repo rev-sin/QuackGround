@@ -1,6 +1,6 @@
 # QuackGround
 
-#### [Demo]() | [Video]() | [Pitchdeck](https://www.figma.com/deck/UdBDq78PughN104FIJSfYA)
+#### [Demo](https://quack-ground.vercel.app/) | [Video]() | [Pitchdeck](https://www.figma.com/deck/UdBDq78PughN104FIJSfYA) | [Twitter](https://x.com/QuackGround)
 
 ## Project Overview
 
