@@ -29,7 +29,7 @@ export default function Hom1() {
     </p>
     <div className="flex space-x-4">
       <Link
-        href="/marketplace"
+        href="/buy"
         className="px-6 py-3 bg-yellow-400 text-black font-bold rounded-xl shadow-md hover:bg-orange-500 hover:shadow-orange-500/40 transition"
       >
         Explore Marketplace

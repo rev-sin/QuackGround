@@ -19,8 +19,8 @@ export default function Footer() {
         <div className="flex space-x-6 text-gray-300 font-medium">
           <Link href="/" className="hover:text-yellow-400 transition">Home</Link>
           <Link href="/create" className="hover:text-yellow-400 transition">Create NFT</Link>
-          <Link href="/marketplace" className="hover:text-yellow-400 transition">Marketplace</Link>
-          <Link href="/my-nfts" className="hover:text-yellow-400 transition">My NFTs</Link>
+          <Link href="/buy" className="hover:text-yellow-400 transition">Marketplace</Link>
+          <Link href="/sell" className="hover:text-yellow-400 transition">My NFTs</Link>
         </div>
 
         {/* Social Icons */}
