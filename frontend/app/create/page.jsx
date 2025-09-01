@@ -23,7 +23,12 @@ export default function CreateNFTPage() {
 
   const handleMint = () => {
     if (!generatedImage) return;
-    const nft = { id: mintedNFTs.length + 1, image: generatedImage, prompt, profit: 0 };
+    const nft = {
+      id: mintedNFTs.length + 1,
+      image: generatedImage,
+      prompt,
+      profit: 0,
+    };
     setMintedNFTs([...mintedNFTs, nft]);
     setPrompt("");
     setGeneratedImage(null);
@@ -57,7 +62,11 @@ export default function CreateNFTPage() {
       {/* Generated Image */}
       {generatedImage && (
         <div className="w-full max-w-md bg-gray-900 p-6 rounded-2xl shadow-lg mb-8 flex flex-col items-center">
-          <img src={generatedImage} alt="Generated NFT" className="rounded-xl w-full h-auto mb-4" />
+          <img
+            src={generatedImage}
+            alt="Generated NFT"
+            className="rounded-xl w-full h-auto mb-4"
+          />
           <div className="flex gap-4 w-full">
             <button
               onClick={handleMint}
@@ -87,14 +96,23 @@ export default function CreateNFTPage() {
                 key={nft.id}
                 className="bg-gray-900 p-4 rounded-2xl shadow-lg flex flex-col items-center"
               >
-                <img src={nft.image} alt={`NFT ${nft.id}`} className="rounded-xl w-full h-48 object-cover mb-3" />
-                <h3 className="font-semibold text-lg mb-1 truncate">{nft.prompt}</h3>
-                <p className="text-gray-400 text-sm">Profit: {nft.profit} $DUCK</p>
+                <img
+                  src={nft.image}
+                  alt={`NFT ${nft.id}`}
+                  className="rounded-xl w-full h-48 object-cover mb-3"
+                />
+                <h3 className="font-semibold text-lg mb-1 truncate">
+                  {nft.prompt}
+                </h3>
+                <p className="text-gray-400 text-sm">
+                  Profit: {nft.profit} $DUCK
+                </p>
               </div>
             ))}
           </div>
           <p className="text-yellow-400 text-center mt-6 font-semibold">
-            Total Proceeds: {mintedNFTs.reduce((acc, nft) => acc + nft.profit, 0)} $DUCK
+            Total Proceeds:{" "}
+            {mintedNFTs.reduce((acc, nft) => acc + nft.profit, 0)} $DUCK
           </p>
         </div>
       )}

@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import Link from "next/link";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { motion, AnimatePresence } from "framer-motion";
 import WalletLogin from "./WalletLogin";
 
 export default function Nav() {
@@ -22,19 +22,18 @@ export default function Nav() {
       <div className="flex items-center justify-between max-w-7xl mx-auto">
         {/* Logo */}
         <div className="flex items-center space-x-3">
-         <Image
-  src="/2.png"
-  alt="QuackGround Logo"
-  width={70}       // bigger size
-  height={70}
-  className="object-contain"
-  style={{ maxWidth: "100%", height: "auto" }} // responsive for small screens
-/>
+          <Image
+            src="/2.png"
+            alt="QuackGround Logo"
+            width={70} // bigger size
+            height={70}
+            className="object-contain"
+            style={{ maxWidth: "100%", height: "auto" }} // responsive for small screens
+          />
 
-
-         <h1 className="text-2xl md:text-3xl font-bold text-yellow-400">
-  QuackGround
-</h1>
+          <h1 className="text-2xl md:text-3xl font-bold text-yellow-400">
+            QuackGround
+          </h1>
         </div>
 
         {/* Desktop Links */}
@@ -49,7 +48,7 @@ export default function Nav() {
             </Link>
           ))}
           <button className="px-4 py-2 bg-yellow-400 text-black rounded-lg font-semibold hover:bg-yellow-300 hover:shadow-lg hover:shadow-yellow-500/30 transition">
-                <WalletLogin />
+            <WalletLogin />
           </button>
         </div>
 

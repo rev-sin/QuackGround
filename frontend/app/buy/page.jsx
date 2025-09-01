@@ -9,10 +9,38 @@ export default function MarketplacePage() {
 
   // Dummy marketplace NFTs
   const marketplaceNFTs = [
-    { id: 1, name: "Golden Duck", collection: "Crypto Birds", rarity: "Rare", image: "/nft1.png", price: 10 },
-    { id: 2, name: "Crypto Pond", collection: "Water World", rarity: "Epic", image: "/nft2.png", price: 15 },
-    { id: 3, name: "Rare Feather", collection: "Crypto Birds", rarity: "Legendary", image: "/nft3.png", price: 25 },
-    { id: 4, name: "Silver Duckling", collection: "Crypto Birds", rarity: "Common", image: "/nft4.png", price: 5 },
+    {
+      id: 1,
+      name: "Golden Duck",
+      collection: "Crypto Birds",
+      rarity: "Rare",
+      image: "/nft1.png",
+      price: 10,
+    },
+    {
+      id: 2,
+      name: "Crypto Pond",
+      collection: "Water World",
+      rarity: "Epic",
+      image: "/nft2.png",
+      price: 15,
+    },
+    {
+      id: 3,
+      name: "Rare Feather",
+      collection: "Crypto Birds",
+      rarity: "Legendary",
+      image: "/nft3.png",
+      price: 25,
+    },
+    {
+      id: 4,
+      name: "Silver Duckling",
+      collection: "Crypto Birds",
+      rarity: "Common",
+      image: "/nft4.png",
+      price: 5,
+    },
   ];
 
   const handleSelect = (nft) => {
@@ -29,7 +57,9 @@ export default function MarketplacePage() {
     }
     setShowModal(false);
     setSelectedNFT(null);
-    setSuccessMessage(`Successfully purchased ${quantity} ${selectedNFT.name}(s) for ${selectedNFT.price * quantity} $DUCK!`);
+    setSuccessMessage(
+      `Successfully purchased ${quantity} ${selectedNFT.name}(s) for ${selectedNFT.price * quantity} $DUCK!`,
+    );
     setQuantity(1);
   };
 
@@ -55,8 +85,12 @@ export default function MarketplacePage() {
               />
             </div>
             <h2 className="text-lg font-semibold mt-3">{nft.name}</h2>
-            <p className="text-sm text-gray-400">{nft.collection} • {nft.rarity}</p>
-            <p className="mt-2 font-semibold text-yellow-400">{nft.price} $DUCK</p>
+            <p className="text-sm text-gray-400">
+              {nft.collection} • {nft.rarity}
+            </p>
+            <p className="mt-2 font-semibold text-yellow-400">
+              {nft.price} $DUCK
+            </p>
           </div>
         ))}
       </div>
@@ -65,14 +99,18 @@ export default function MarketplacePage() {
       {showModal && selectedNFT && (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4">
           <div className="bg-gray-900 p-6 rounded-3xl max-w-md w-full text-center shadow-2xl">
-            <h3 className="text-xl font-bold mb-4 text-yellow-400">Purchase NFT</h3>
+            <h3 className="text-xl font-bold mb-4 text-yellow-400">
+              Purchase NFT
+            </h3>
             <img
               src={selectedNFT.image}
               alt={selectedNFT.name}
               className="rounded-2xl w-full h-64 object-cover mb-4"
             />
             <h2 className="text-lg font-semibold mb-2">{selectedNFT.name}</h2>
-            <p className="text-gray-400 mb-4">{selectedNFT.collection} • {selectedNFT.rarity}</p>
+            <p className="text-gray-400 mb-4">
+              {selectedNFT.collection} • {selectedNFT.rarity}
+            </p>
             <label className="block text-sm mb-2">Quantity</label>
             <input
               type="number"
