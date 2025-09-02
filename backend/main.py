@@ -165,7 +165,7 @@ def main():
         )
         print("\nNFT Creation Complete!")
         print(
-            f"View on explorer: https://www.oklink.com/duckchain-testnet/{receipt.transactionHash.hex()}"
+            f"View on explorer: https://scan.duckchain.io/tx/{receipt.transactionHash.hex()}"
         )
         print(f"Token URI: {token_uri}")
 
